@@ -2,16 +2,18 @@
   description = "Test nixspace";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nixspace.url = "github:chadac/nixspace";
+    systems.url = "github:nix-systems/default";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    nixspace.url = "path:/home/chadac/code/github.com/chadac/nixspace";
   };
 
-  outputs = { self, nixpkgs, nixspace }@inputs: nixspace.lib.mkWorkspace {
-    src = ./.;
-    inherit inputs;
-  } ({ ... }: {
-    perSystem = { pkgs, system, projects, ... }: {
-      # merge all flakes together
-      imports = map (project: project.lib.flakeModule) projects;
+  outputs = { self, flake-parts, systems, nixspace, ... }@inputs: let
+    ws = nixspace.lib.mkWorkspace {
+      src = ./.;
+      inherit inputs;
     };
-  });
+  in flake-parts.lib.mkFlake { inherit inputs; } {
+    systems = import systems;
+    inputs = [ ws.flakeModule ];
+  };
 }
