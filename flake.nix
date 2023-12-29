@@ -14,6 +14,6 @@
     };
   in flake-parts.lib.mkFlake { inherit inputs; } {
     systems = import systems;
-    inputs = [ ws.flakeModule ];
+    imports = [ ws.flakeModule ];
   };
 }
