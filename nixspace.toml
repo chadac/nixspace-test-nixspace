@@ -29,25 +29,3 @@ path = "./nix-shared"
 name = "lambda-hello-world"
 url = "github:chadac/test-nixspace-lambda-hello-world"
 path = "./lambda/hello-world"
-
-  # - name: tf-nix-lambda
-  #   url: github:chadac/test-nixspace-tf-nix-lambda
-  #   path: ./infra/terraform-modules/tf-nix-lambda
-  # - name: core-infra
-  #   url: github:chadac/test-nixspace-core-infra
-  #   path: ./infra/core-infra
-  # - name: postgres-test-data
-  #   url: github:chadac/test-nixspace-postgres-test-data
-  #   path: ./test/db
-  # - name: flask-api
-  #   url: github:chadac/test-nixspace-flask-api
-  #   path: ./backend/flask-api
-  # - name: gql-schema
-  #   url: github:chadac/test-nixspace-gql-schema
-  #   path: ./backend/gql-schema
-  # - name: apollo-gql-api
-  #   url: github:chadac/test-nixspace-gql-api
-  #   path: ./backend/gql-api
-  # - name: frontend
-  #   url: github:chadac/test-nixspace-frontend
-  #   path: ./frontend/main
