@@ -29,3 +29,23 @@ path = "./nix-shared"
 name = "lambda-hello-world"
 url = "github:chadac/test-nixspace-lambda-hello-world"
 path = "./lambda/hello-world"
+
+[[projects]]
+name = "lib-python-my-library"
+url = "github:chadac/test-nixspace-lib-python-my-library"
+path = "./lib/python/my-library"
+
+[[projects]]
+name = "service-rest-api"
+url = "github:chadac/test-nixspace-service-rest-api"
+path = "./service/rest-api"
+
+[[projects]]
+name = "config-graphql-schema"
+url = "github:chadac/test-nixspace-config-graphql-schema"
+path = "./config/graphql-schema"
+
+[[projects]]
+name = "service-gql-api"
+url = "github:chadac/test-nixspace-service-gql-api"
+path = "./service/gql-api"
